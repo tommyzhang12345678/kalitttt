@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kali Linux Tutorial for Beginners</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            background-color: #333;
+            padding: 1rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: #00f;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        section {
+            background-color: #fff;
+            padding: 2rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #1a1a1a;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        pre {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #1a1a1a;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            nav ul li {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kali Linux Tutorial for Beginners</h1>
+        <p>Learn the Basics of Kali Linux for Ethical Hacking and Penetration Testing</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#basic-commands">Basic Commands</a></li>
+            <li><a href="#tools">Popular Tools</a></li>
+            <li><a href="#resources">Resources</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section id="introduction">
+            <h2>What is Kali Linux?</h2>
+            <p>Kali Linux is a specialized Linux distribution designed for security researchers, penetration testers, and ethical hackers. It comes pre-installed with hundreds of tools for network analysis, vulnerability assessment, and penetration testing.</p>
+            <p><strong>Important:</strong> Kali Linux should only be used in environments where you have explicit permission to test. Unauthorized hacking is illegal.</p>
+        </section>
+        <section id="installation">
+            <h2>Installing Kali Linux</h2>
+            <p>You can install Kali Linux as a primary operating system, in a virtual machine, or as a live USB. Here’s a brief guide to setting it up in a virtual machine:</p>
+            <ol>
+                <li>Download the Kali Linux ISO from <a href="https://www.kali.org" target="_blank">kali.org</a>.</li>
+                <li>Install a virtualization tool like VirtualBox or VMware.</li>
+                <li>Create a new virtual machine and attach the Kali ISO.</li>
+                <li>Follow the on-screen instructions to install Kali Linux.</li>
+                <li>Update the system using the following commands:</li>
+            </ol>
+            <pre><code>sudo apt update
+sudo apt full-upgrade -y
+</code></pre>
+        </section>
+        <section id="basic-commands">
+            <h2>Basic Kali Linux Commands</h2>
+            <p>Kali Linux uses a Linux terminal for most tasks. Here are some essential commands to get started:</p>
+            <ul>
+                <li><code>ls</code> - List files and directories.</li>
+                <li><code>cd [directory]</code> - Change to a specific directory.</li>
+                <li><code>pwd</code> - Display the current working directory.</li>
+                <li><code>man [command]</code> - Show the manual for a command (e.g., <code>man ls</code>).</li>
+                <li><code>sudo</code> - Run a command with superuser privileges.</li>
+            </ul>
+            <p>Example: To navigate to the Documents folder and list its contents:</p>
+            <pre><code>cd Documents
+ls
+</code></pre>
+        </section>
+        <section id="tools">
+            <h2>Popular Tools in Kali Linux</h2>
+            <p>Kali Linux includes many tools for penetration testing. Here are a few popular ones:</p>
+            <ul>
+                <li><strong>Nmap</strong> - Network exploration and port scanning.
+                    <pre><code>nmap 192.168.1.1</code></pre>
+                </li>
+                <li><strong>Metasploit</strong> - Penetration testing framework.
+                    <pre><code>msfconsole</code></pre>
+                </li>
+                <li><strong>Aircrack-ng</strong> - Wireless network analysis.
+                    <pre><code>airmon-ng start wlan0</code></pre>
+                </li>
+                <li><strong>Burp Suite</strong> - Web application testing (GUI-based).</li>
+            </ul>
+            <p><strong>Note:</strong> Always use these tools ethically and with permission.</p>
+        </section>
+        <section id="resources">
+            <h2>Further Learning Resources</h2>
+            <p>To deepen your knowledge of Kali Linux and ethical hacking, explore these resources:</p>
+            <ul>
+                <li><a href="https://www.kali.org/docs/" target="_blank">Official Kali Linux Documentation</a></li>
+                <li><a href="https://tryhackme.com" target="_blank">TryHackMe</a> - Hands-on cybersecurity labs.</li>
+                <li><a href="https://hackthebox.com" target="_blank">Hack The Box</a> - Advanced penetration testing challenges.</li>
+                <li>Books: <em>"The Hacker Playbook" by Peter Kim</em> and <em>"Hacking: The Art of Exploitation" by Jon Erickson</em>.</li>
+            </ul>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Kali Linux Tutorial. Use Kali Linux responsibly and ethically.</p>
+    </footer>
+</body>
+</html>
